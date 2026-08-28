@@ -1,9 +1,10 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 from langchain_chroma import Chroma
 from src.constants import Constants
 
-embeddings = HuggingFaceEmbeddings(model_name=Constants.EMBEDDINGS_MODEL)
+
+embeddings = FastEmbedEmbeddings(model_name=Constants.EMBEDDINGS_MODEL)
 
 
 def index_documents(video_id: str, documents):
