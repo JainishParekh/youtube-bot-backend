@@ -14,7 +14,7 @@ An asynchronous FastAPI application that extracts transcripts from YouTube video
     
 *   **Embeddings:** HuggingFace (all-MiniLM-L6-v2)
     
-*   **LLM:** Groq (Llama-3-8b)
+*   **LLM:** Groq (Open AI/ GPT-OSS-20b)
     
 *   **Containerization:** Docker
     
