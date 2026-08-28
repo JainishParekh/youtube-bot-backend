@@ -10,6 +10,10 @@ logging.basicConfig(level=logging.INFO)
 
 app = FastAPI(title="YouTube RAG Bot")
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
 # Register Custom Exception Handler
 @app.exception_handler(AppException)
 async def app_exception_handler(request: Request, exc: AppException):
@@ -28,4 +32,12 @@ app.include_router(router, prefix="/api")
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    import os
+    
+    port = int(os.environ.get("PORT", 10000))
+
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=port
+    )
