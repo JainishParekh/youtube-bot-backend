@@ -16,6 +16,7 @@ defusedxml==0.7.1
 distro==1.9.0
 durationpy==0.11
 fastapi==0.141.1
+fastembed==0.8.0
 filelock==3.32.4
 flatbuffers==25.12.19
 frozenlist==1.8.0
@@ -49,6 +50,7 @@ langchain-huggingface==1.2.2
 langchain-protocol==0.0.19
 langchain-text-splitters==1.1.2
 langsmith==0.11.2
+loguru==0.7.3
 markdown-it-py==4.2.0
 markupsafe==3.0.3
 mdurl==0.1.2
@@ -69,8 +71,10 @@ opentelemetry-semantic-conventions==0.65b0
 orjson==3.12.0
 overrides==7.7.0
 packaging==26.3
+pillow==12.3.0
 propcache==0.5.2
 protobuf==7.36.0
+py-rust-stemmers==0.1.8
 pybase64==1.5.0
 pydantic==2.13.4
 pydantic-core==2.46.4
@@ -115,6 +119,7 @@ uvicorn==0.52.4
 watchfiles==1.2.0
 websocket-client==1.9.0
 websockets==17.1
+win32-setctime==1.2.0
 xxhash==4.0.1
 yarl==1.24.5
 youtube-transcript-api==1.2.4
