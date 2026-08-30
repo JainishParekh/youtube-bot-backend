@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from src.api.routes import router
 from src.api.exceptions import AppException
 from src.api.business_dto import ErrorResponse
@@ -9,6 +10,17 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 app = FastAPI(title="YouTube RAG Bot")
+
+origins = ["http://localhost:5173"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+
+)
 
 @app.get("/health")
 async def health():
